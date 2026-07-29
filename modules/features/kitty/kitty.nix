@@ -10,6 +10,7 @@
 	    inherit pkgs;
 
 	    settings = {
+		shell = "${lib.getExe self'.packages.myFish}";
 		enable_audio_bell = false;
 
 		font_size = 12;
@@ -38,7 +39,7 @@
 		"alt+8" = "goto_tab 8";
 		"alt+9" = "goto_tab 9";
 		"alt+q" = "close_tab";
-		"alt+t" = "new_tab_with_cwd ${lib.getExe self'.packages.myFish}";
+		"alt+t" = "new_tab_with_cwd";
 	    };
 	};
     };

@@ -1,6 +1,5 @@
 { self, pkgs, inputs, ... }: {
     flake.nixosModules.melinoePackages = { config, pkgs, inputs, lib, ... }: {
-
 	nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
@@ -38,6 +37,10 @@
 
 	# Install specific packages as modules
 	programs.firefox.enable = true;
+
+	# VPN
+	services.mullvad-vpn.package = pkgs.mullvad-vpn;
+	services.mullvad-vpn.enable = true;
 
 	# Enable services required for some packages
 	services.power-profiles-daemon.enable = true;

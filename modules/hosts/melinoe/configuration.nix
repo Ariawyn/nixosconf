@@ -4,6 +4,7 @@
             self.nixosModules.melinoeHardware
 	    self.nixosModules.melinoePackages
             self.nixosModules.niri
+	    self.nixosModules.nvim
         ];
         
         # Bootloader
@@ -73,7 +74,6 @@
             enable = true;
             wayland.enable = true;
         };
-
 
         # user stuff
         users.users.aria = {
