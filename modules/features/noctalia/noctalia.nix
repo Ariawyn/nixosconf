@@ -513,6 +513,82 @@
 		    monitorForColors = "";
 		    syncGsettings = true;
 		};
+		osd = {
+		    enabled = true;
+		    location = "top_right";
+		    autoHideMs = 2000;
+		    overlayLayer = true;
+		    backgroundOpacity = 1;
+		    enabledTypes = [ 0 1 2 ];
+		    monitors = [];
+		};
+		audio = {
+		    volumeStep = 5;
+		    volumeOverdrive = false;
+		    spectrumFrameRate = 30;
+		    visualizerType = "linear";
+		    spectrumMirrored = true;
+		    mprisBlacklist = [];
+	 	    preferredPlayer = "";
+		    volumeFeedback = false;
+		    volumeFeedbackSoundFile = "";
+		};
+		brightness = {
+		    brightnessStep = 5;
+		    enforceMinimum = true;
+		    enableDdcSupport = false;
+		    backlightDeviceMappings = [];
+		};
+		templates = {
+		    activeTemplates = [];
+		    enableUserTheming = false;
+		};
+		nightLight = {
+		    enable = false;
+		    forced = false;
+		    autoSchedule = true;
+		    nightTemp = "4000";
+		    dayTemp = "6500";
+		    manualSunrise = "06:30";
+		    manualSunset = "18:30";
+		};
+		hooks = {
+		    enabled = false;
+		    wallpaperChange = "";
+		    darkModeChange = "";
+		    screenLock = "";
+		    screenUnlock = "";
+		    performanceModeEnabled = "";
+		    performanceModeDisabled = "";
+		    startup = "";
+		    session = "";
+		    colorGeneration = "";
+		};
+		plugins = {
+		    autoUpdate = false;
+		    notifyUpdates = true;
+		};
+		idle = {
+		    enabled = true;
+		    screenOffTimeout = 600;
+		    lockTimeout = 660;
+		    suspendTimeout = 1800;
+		    fadeDuration = 5;
+		    screenOffCommand = "";
+		    lockCommand = "";
+		    suspendCommand = "";
+		    resumeScreenOffCommand = "";
+		    resumeLockCommand = "";
+		    resumeSuspendCommand = "";
+		    customCommands = "[]";
+		};
+		desktopWidgets = {
+		    enable = false;
+		    overviewEnabled = true;
+		    gridSnap = false;
+		    gridSnapScale = false;
+		    monitorWidgets = [];
+		};
 	    };
         };
     };
