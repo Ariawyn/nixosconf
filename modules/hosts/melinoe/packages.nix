@@ -11,6 +11,7 @@
 	    thunar
 	    thunar-volman
 	    gvfs
+	    yazi
 
 	    # media
 	    vlc
