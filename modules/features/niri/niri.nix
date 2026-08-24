@@ -32,16 +32,27 @@
 		    };
 		};
 
-		window-rules = [{
-		    matches = [
-			{
-			    app-id = ".*";
-			}
-		    ];
-		    geometry-corner-radius = 10;
-		    clip-to-geometry = true;
-		    draw-border-with-background = false;
-		}];
+		window-rules = [
+		    {
+		        matches = [
+			    {
+			        app-id = ".*";
+			    }
+		        ];
+		        geometry-corner-radius = 10;
+		        clip-to-geometry = true;
+		    	draw-border-with-background = false;
+		    }
+		    {
+			matches = [
+			    {
+				app-id = "firefox";
+			    }
+			];
+			open-maximized = true;
+			open-maximized-to-edges = false;
+		    }
+		];
 
                 binds = {
 		    "Mod+Return".spawn-sh = "${lib.getExe self'.packages.myKitty}";
