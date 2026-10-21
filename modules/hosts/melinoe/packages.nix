@@ -4,13 +4,11 @@
 
 	environment.systemPackages = with pkgs; [
 	    # text editors
-	    vim
 	    gedit
 
 	    # file manager
 	    thunar
 	    thunar-volman
-	    gvfs
 	    yazi
 
 	    # media
@@ -23,7 +21,6 @@
 	    qbittorrent
 
 	    # dev stuff
-	    git
 	    godot
 
 	    # social stuff
@@ -45,7 +42,6 @@
 
 	# Enable services required for some packages
 	services.power-profiles-daemon.enable = true;
-	services.gvfs.enable = true;
 
 	services.upower.enable = true;
     };

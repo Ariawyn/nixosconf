@@ -1,10 +1,11 @@
 { self, pkgs, inputs, ... }: {
     flake.nixosModules.melinoeConfiguration = { config, pkgs, inputs, lib, ... }: {
-        imports = [
-            self.nixosModules.melinoeHardware
-	    self.nixosModules.melinoePackages
-            self.nixosModules.niri
-	    self.nixosModules.nvim
+        imports = with self.nixosModules; [
+            melinoeHardware
+	    melinoePackages
+            niri
+	    nvim
+            system
         ];
         
         # Bootloader
@@ -12,25 +13,7 @@
         boot.loader.efi.canTouchEfiVariables = true;
 
         # Networking
-        networking.networkmanager.enable = true;
         networking.hostName = "melinoe";
-
-        # Location
-        time.timeZone = "Europe/London";
-        i18n.defaultLocale = "en_GB.UTF-8";
-        i18n.extraLocaleSettings = {
-            LC_ADDRESS = "en_GB.UTF-8";
-            LC_IDENTIFICATION = "en_GB.UTF-8";
-            LC_MEASUREMENT = "en_GB.UTF-8";
-            LC_MONETARY = "en_GB.UTF-8";
-            LC_NAME = "en_GB.UTF-8";
-            LC_PAPER = "en_GB.UTF-8";
-            LC_TELEPHONE = "en_GB.UTF-8";
-            LC_TIME = "en_GB.UTF-8";
-        };
-
-        # Configure console keymap
-        console.keyMap = "uk";
 
         # Enable sound with pipewire
         services.pulseaudio.enable = false;
@@ -75,23 +58,6 @@
             wayland.enable = true;
         };
 
-        # user stuff
-        users.users.aria = {
-            isNormalUser = true;
-            description = "Aria Jonsdottir";
-            extraGroups = [ "networkmanager" "wheel" ];
-        };
-
-        security.sudo.extraRules = [{
-            users = [ "aria" ];
-            commands = [{ 
-                command = "ALL";
-                options = [ "NOPASSWD" ];
-            }];
-        }];
-
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-        system.stateVersion = "25.05";
     };
 }
