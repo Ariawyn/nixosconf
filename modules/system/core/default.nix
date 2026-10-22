@@ -3,6 +3,7 @@
     modules = with self.nixosModules; [
       users
       locale
+      bootloader
       networking
     ];
   in {

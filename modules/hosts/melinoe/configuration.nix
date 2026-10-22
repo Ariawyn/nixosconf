@@ -7,10 +7,6 @@
 	    nvim
             system
         ];
-        
-        # Bootloader
-        boot.loader.systemd-boot.enable = true;
-        boot.loader.efi.canTouchEfiVariables = true;
 
         # Networking
         networking.hostName = "melinoe";
