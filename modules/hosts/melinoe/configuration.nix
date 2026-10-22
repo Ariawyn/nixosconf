@@ -5,7 +5,7 @@
 	    melinoePackages
             niri
 	    nvim
-            system
+            core
         ];
 
         # Networking
@@ -53,7 +53,5 @@
             enable = true;
             wayland.enable = true;
         };
-
-        nix.settings.experimental-features = [ "nix-command" "flakes" ];
     };
 }

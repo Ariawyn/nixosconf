@@ -1,10 +1,11 @@
 {self, ...}: {
-  flake.nixosModules.system = {pkgs, ...}: let
+  flake.nixosModules.core = {pkgs, ...}: let
     modules = with self.nixosModules; [
       users
       locale
       bootloader
       networking
+      nix
     ];
   in {
     imports = modules;

@@ -1,7 +1,5 @@
 { self, pkgs, inputs, ... }: {
     flake.nixosModules.melinoePackages = { config, pkgs, inputs, lib, ... }: {
-	nixpkgs.config.allowUnfree = true;
-
 	environment.systemPackages = with pkgs; [
 	    # text editors
 	    gedit
