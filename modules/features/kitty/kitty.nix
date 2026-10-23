@@ -19,7 +19,7 @@
 		scrollbar = "never";
 		window_padding_width = 9;
 
-		cursor_trail = 1;
+		cursor_trail = 3;
 		cursor_trail_start_threshold = 1;
 
 		confirm_os_window_close = 0;

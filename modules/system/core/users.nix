@@ -7,6 +7,7 @@
         "networkmanager"
         "wheel"
       ];
+      initialPassword = "password";
     };
     
     security.sudo.extraRules = [{

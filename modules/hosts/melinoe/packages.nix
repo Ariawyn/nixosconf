@@ -1,44 +1,25 @@
 { self, pkgs, inputs, ... }: {
     flake.nixosModules.melinoePackages = { config, pkgs, inputs, lib, ... }: {
 	environment.systemPackages = with pkgs; [
-	    # text editors
+	    fastfetch	
 	    gedit
-
-	    # file manager
 	    thunar
 	    thunar-volman
 	    yazi
-
-	    # media
 	    vlc
-
-	    # audio
 	    pavucontrol
-
-	    # downloads
 	    qbittorrent
-
-	    # dev stuff
 	    godot
-
-	    # social stuff
 	    discord
-
-	    # gaming
 	    steam
-
-	    # writing / productivity
 	    obsidian
 	];
 
-	# Install specific packages as modules
 	programs.firefox.enable = true;
 
-	# VPN
 	services.mullvad-vpn.package = pkgs.mullvad-vpn;
 	services.mullvad-vpn.enable = true;
 
-	# Enable services required for some packages
 	services.power-profiles-daemon.enable = true;
 
 	services.upower.enable = true;
