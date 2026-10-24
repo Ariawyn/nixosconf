@@ -8,6 +8,9 @@
             core
         ];
 
+	# Bluetooth
+	hardware.bluetooth.enable = true;
+
         # Networking
         networking.hostName = "melinoe";
 
