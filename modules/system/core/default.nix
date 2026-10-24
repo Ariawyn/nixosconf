@@ -6,6 +6,7 @@
       bootloader
       networking
       nix
+      utils
     ];
   in {
     imports = modules;
