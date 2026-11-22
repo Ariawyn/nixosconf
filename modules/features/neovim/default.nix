@@ -8,7 +8,11 @@
     perSystem = { pkgs, lib, self', ... }: {
 	packages.myNeovim = inputs.wrapper-modules.wrappers.neovim.wrap {
 	    inherit pkgs;
-	    
+            env = {
+                "CONFIG_ROOT" = ./.;
+	    };
+	    runtimePkgs = pkgList;
+	    settings.config_directory = ./.;
 	};
     };
 }

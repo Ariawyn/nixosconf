@@ -1,12 +1,11 @@
 { self, inputs, moduleWithSystem, ... }: {
     flake.nixosModules.kitty = moduleWithSystem ({self', ...}: {
-	programs.kitty = {
-	    enable = true;
-	    package = self'.packages.myKitty;
-	};
+        environment.systemPackages = with self'.packages; [
+	    kitty
+	];
     });    
     perSystem = { pkgs, lib, self', ... }: {
-	packages.myKitty = inputs.wrapper-modules.wrappers.kitty.wrap {
+	packages.kitty = inputs.wrapper-modules.wrappers.kitty.wrap {
 	    inherit pkgs;
 
 	    settings = {

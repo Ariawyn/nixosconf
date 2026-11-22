@@ -13,7 +13,31 @@
 	    discord
 	    steam
 	    obsidian
+	    wdisplays
 	];
+
+	services.jellyfin = {
+	    enable = true;
+	    openFirewall = true;
+	};
+
+	services.avahi = {
+	    enable = true;
+	    nssmdns4 = true;
+	    openFirewall = true;
+	    publish = {
+	        enable = true;
+		userServices = true;
+	    };
+	};
+
+	networking.firewall = {
+	    enable = true;
+	    allowedTCPPorts = [ 8010 8096 ];
+	    allowedUDPPortRanges = [
+		{ from = 32768; to = 60999; }
+	    ];
+	};
 
 	programs.firefox.enable = true;
 

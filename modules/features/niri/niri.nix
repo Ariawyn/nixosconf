@@ -55,7 +55,7 @@
 		];
 
                 binds = {
-		    "Mod+Return".spawn-sh = "${lib.getExe self'.packages.myKitty}";
+		    "Mod+Return".spawn-sh = "${lib.getExe self'.packages.kitty}";
 
 		    "Mod+S".spawn-sh =
 			"${lib.getExe self'.packages.myNoctalia} ipc call launcher toggle";

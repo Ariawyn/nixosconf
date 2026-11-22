@@ -4,7 +4,6 @@
             melinoeHardware
 	    melinoePackages
             niri
-	    nvim
             core
         ];
 
