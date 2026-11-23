@@ -38,7 +38,6 @@ vim.opt.showmatch = true
 
 -- column
 vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "100"
 
 -- indent
 vim.opt.smartindent = true

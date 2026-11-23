@@ -1,6 +1,6 @@
 local plugins = {}
 
--- 1. Setup pats
+-- 1. Setup paths
 local lua_path = os.getenv("CONFIG_ROOT") .. "/lua"
 local plugin_dir = lua_path .. "/plugins"
 
@@ -8,7 +8,7 @@ local plugin_dir = lua_path .. "/plugins"
 local files = vim.fn.split(vim.fn.globpath(plugin_dir, "**/*.lua"), "\n")
 
 for _, file in ipairs(files) do
-	-- Get path relative to the lua directory
+	-- Get path relative to the 'lua' directory
 	-- Example: /home/user/.config/nvim/lua/plugins/ui/statusline.lua
 	-- Becomes: plugins/ui/statusline.lua
 	local relative_path = file:sub(#lua_path + 2)
@@ -16,7 +16,7 @@ for _, file in ipairs(files) do
 	-- Remove the .lua extension
 	local module_path = relative_path:gsub("%.lua$", "")
 
-	-- Convert path slashes to lua dots
+	-- Convert path slashes to Lua dots (plugins/ui/statusline -> plugins.ui.statusline)
 	module_path = module_path:gsub("/", ".")
 
 	-- 3. The Guard: Don't require the current file (plugins.init)
@@ -33,3 +33,4 @@ for _, file in ipairs(files) do
 end
 
 return plugins
+
