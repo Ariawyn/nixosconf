@@ -8,7 +8,15 @@
     perSystem = { pkgs, lib, self', ... }: let
 	    pkgList = with pkgs; [
 			# LSPs
-
+			lua-language-server
+			vscode-langservers-extracted
+			rust-analyzer
+			ast-grep
+			prettier
+			alejandra
+			rustfmt
+			stylua
+			nixd
 
 			# tools
 			lua5_5
@@ -23,7 +31,7 @@
 	in {
 		packages.neovim = inputs.wrapper-modules.wrappers.neovim.wrap {
 			inherit pkgs;
-
+ 
 			env = {
 		        "CONFIG_ROOT" = ./.;
 			};
