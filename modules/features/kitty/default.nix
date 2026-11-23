@@ -9,7 +9,7 @@
 	    inherit pkgs;
 
 	    settings = {
-		shell = "${lib.getExe self'.packages.myFish}";
+		shell = "${lib.getExe self'.packages.fish}";
 		enable_audio_bell = false;
 
 		font_size = 12;

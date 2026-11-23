@@ -3,7 +3,8 @@
         imports = with self.nixosModules; [
             melinoeHardware
 	    melinoePackages
-            niri
+            nvim
+	    niri
             core
         ];
 
