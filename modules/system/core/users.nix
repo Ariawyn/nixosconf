@@ -9,13 +9,17 @@
       ];
       initialPassword = "password";
     };
-    
-    security.sudo.extraRules = [{
-      users = [ "aria" ];
-      commands = [{
-        command = "ALL";
-        options = [ "NOPASSWD" ];
-      }];
-    }];
+
+    security.sudo.extraRules = [
+      {
+        users = ["aria"];
+        commands = [
+          {
+            command = "ALL";
+            options = ["NOPASSWD"];
+          }
+        ];
+      }
+    ];
   };
 }

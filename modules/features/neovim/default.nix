@@ -21,6 +21,9 @@
       rustfmt
       stylua
       nixd
+      csharp-ls
+      csharpier
+      gdtoolkit_4
 
       # tools
       lua5_5

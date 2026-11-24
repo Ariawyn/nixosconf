@@ -11,6 +11,8 @@ require("conform").setup({
 		nix = { "alejandra" },
 		css = { "prettier" },
 		rust = { "rustfmt" },
+		csharp = { "csharpier" },
+		gdscript = { "gdtoolkit_4" },
 	},
 	format_on_save = true,
 	undojoin = true,

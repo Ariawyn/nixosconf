@@ -18,7 +18,7 @@
       usbutils
       wget
       git
-	  wl-clipboard
+      wl-clipboard
     ];
 
     services.gvfs.enable = true;
