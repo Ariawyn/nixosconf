@@ -45,14 +45,11 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.config("csharp-ls", {})
-
 vim.lsp.enable({
 	"lua_ls",
 	"cssls",
 	"nixd",
 	"rust_analyzer",
-	"csharp-ls",
 })
 
 vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#89b4fa" })
